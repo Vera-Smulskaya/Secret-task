@@ -68,6 +68,25 @@ main {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.song {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 95%;
+  left: 95%;
+  transform: translate(-95%, -95%);
+
+  transition-property: opacity;
+  transition-duration: 450ms;
+  transition-timing-function: ease-in;
+
+}
+
+.party-started {
+  opacity: 0.5;
+  pointer-events: visible;
+}
+
 .display__btn:active {
   background-color: rgb(76, 84, 139);
 }
