@@ -1,6 +1,39 @@
 body {
-  background: url(./images/background.jpg); 
-		color: rgb(35, 34, 34); 
-		background-attachment: fixed;
-    background-size: 100%; 	
+  margin: 0;
+  padding: 0;
+  color: rgb(35, 34, 34); 
+  display: grid;
+  height: 100vh;
+  width: 1200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 45px 1fr;
+}
+
+header {
+  background-color: violet;
+  background-image: url(./images/top.png); 
+  background-attachment: fixed;
+  background-size: contain; 	
+}
+
+main {
+  display: grid;
+  grid-template-columns: 5% 1fr 10%;
+}
+
+.sidebar__left {
+  background-color: grey;
+  background: url(./images/leftSidebar.png); 
+  background-attachment: fixed;
+  background-size: 5%; 	
+}
+
+.sidebar__right {
+  background-color: black;
+};
+
+.display {
+  background-image: url(./images/background.jpg); 
+  background-attachment: fixed;
+  background-size: 100%; 	
 }
