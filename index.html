@@ -4,21 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  <title>Сongratulations</title>
   <link rel="shortcut icon" type="image/x-icon" href="./present.png">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./reset.css">
+  <title>Сongratulations</title>
 </head>
 <body>
-  <header>
-    <img src="./images/top.png" alt="">
-  </header>
-  <main>
-    <aside class="sidebar__left">
-      <img src="./images/leftSidebar.png" alt="">
-    </aside>
-    <div class="display">
-    </div>
-    <aside class="sidebar__right"></aside>
-  </main>
+  <div class="container">
+
+    <header>
+      <img class="header__img" src="./images/top.png" alt="">
+    </header>
+    <main>
+      <aside class="sidebar__left">
+        <img class="controller" src="./images/leftSidebar.png" alt="">
+      </aside>
+      <div class="display">
+        <button class="display__btn">Press me</button>
+      </div>
+      <aside class="sidebar__right">
+        <div class="container">
+
+          <div class="avatar">
+            <img class="avatar__img" src="./images/Ilya.png" width="50" height="50" alt="">
+            <p class="avatar__name">Ilya Dovban</p>
+          </div>
+          <div class="avatar">
+            <img class="avatar__img" src="./images/ViraK.png" width="50" height="50" alt="">
+            <p class="avatar__name">Vira Kovtykha</p>
+          </div>
+          <div class="avatar">
+            <img class="avatar__img" src="./images/ViraS.png" width="50" height="50" alt="">
+            <p class="avatar__name">Vira Smulska</p>
+          </div>
+          <div class="avatar">
+            <img class="avatar__img" src="./images/Yuliia.png" width="50" height="50" alt="">
+            <p class="avatar__name">Yuliia Pakhachuk</p>
+          </div>
+          <div class="avatar">
+            <img class="avatar__img" src="./images/Anhelina.png" width="50" height="50" alt="">
+            <p class="avatar__name">Anhelina Lebedieva</p>
+          </div>
+          <div class="avatar">
+            <img class="avatar__img" src="./images/Oleksandr.png" width="50" height="50" alt="">
+            <p class="avatar__name">Oleksandr Barashovets</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="./index.js"></script>
 </body>
 </html>
