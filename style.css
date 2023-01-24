@@ -6,7 +6,7 @@ html {
 
 body {
   background-color: rgb(29, 29, 29);
-  color: rgb(35, 34, 34); 
+  color: rgb(35, 34, 34);
   width: 100vw;
 }
 
@@ -17,7 +17,7 @@ body {
   /* max-width: 1110px; */
   width: 100%;
   height: 100%;
-} 
+}
 
 header {
   margin: 0px;
@@ -32,17 +32,23 @@ main {
   display: flex;
   width: 100%;
   height: 85vh;
-  background-image: linear-gradient(rgba(140, 140, 231, 0.5), 
-                    rgba(234, 228, 228, 0.426),
-                    rgba(240, 232, 8, 0.377)), 
-                    url(./images/background.jpg);  
+  background-image: linear-gradient(
+      rgba(140, 140, 231, 0.5),
+      rgba(234, 228, 228, 0.426),
+      rgba(240, 232, 8, 0.377)
+    ),
+    url(./images/background.jpg);
   background-size: cover;
 }
 
-.controller {
+/* .controller {
   height: 100%;
   width: 60px;
   margin-right: 0;
+} */
+
+.sidebar__left {
+  margin-top: -2px;
 }
 
 .sidebar__right {
@@ -51,12 +57,16 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  width: 100px;
+  width: 150px;
 }
 
 .display {
   height: 100%;
   width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .display__btn {
@@ -106,12 +116,11 @@ main {
 }
 
 .avatar__name {
-  color: #ffffff ;
+  color: #ffffff;
   font-size: 6px;
   text-align: center;
   margin-top: 6px;
   margin-bottom: 8px;
-
 }
 
 .avatar {
@@ -124,4 +133,224 @@ video {
   margin: auto;
   margin-top: 1px;
   display: none;
+}
+
+.birthday-gift {
+  position: relative;
+}
+.birthday-gift:before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 90px;
+  left: -10px;
+}
+
+.gift {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  background-color: #fbb62b;
+}
+
+.gift:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 100px;
+  background-color: #e7110a;
+  left: 62px;
+}
+
+.gift:after {
+  content: "";
+  position: absolute;
+  box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 100px;
+}
+
+input#click {
+  display: none;
+}
+.click {
+  position: absolute;
+  background-color: #fbb62b;
+  width: 170px;
+  height: 40px;
+  top: -40px;
+  left: -10px;
+  transform-origin: bottom left;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.click:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  background-color: #e7110a;
+  left: 69px;
+}
+.click:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 0;
+  border-bottom: 30px solid #e7110a;
+  border-top: 30px solid #e7110a;
+  border-left: 0px solid transparent;
+  border-right: 30px solid transparent;
+  transform: rotate(-90deg);
+  left: 65px;
+  top: -47px;
+}
+.wishes {
+  position: absolute;
+  transition: 0.5s;
+  color: #333;
+  font-size: 37px;
+  text-align: center;
+  z-index: -1;
+  left: 5px;
+}
+
+#click:checked + .click {
+  transform: rotate(-110deg) scaleX(0.85);
+}
+#click:checked ~ .wishes {
+  transform: translateY(-100px);
+}
+
+.sparkles {
+  position: absolute;
+  display: none;
+  top: -15px;
+  z-index: -2;
+  left: 40px;
+}
+
+.spark1,
+.spark2,
+.spark3,
+.spark4,
+.spark5,
+.spark6 {
+  position: absolute;
+  background-color: #fbb62b;
+  border-radius: 50%;
+  top: -9px;
+  z-index: -1;
+}
+
+.spark1 {
+  width: 8px;
+  height: 8px;
+  left: 30px;
+  top: -9px;
+  animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
+}
+.spark1:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 8px;
+  left: 11px;
+  background-color: #fbb62b;
+  border-radius: 50%;
+}
+
+.spark2 {
+  width: 9px;
+  height: 9px;
+  left: 33px;
+  top: -5px;
+  animation: fire2 0.28s ease-in-out infinite, color 0.4s linear infinite;
+}
+
+.spark2:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 12px;
+  left: 3px;
+  background-color: #fbb62b;
+  border-radius: 50%;
+}
+
+.spark3 {
+  width: 8.5px;
+  height: 8.5px;
+  left: 33px;
+  top: -5px;
+  animation: fire3 0.36s ease-in-out infinite, color2 0.4s linear infinite;
+}
+
+.spark3:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 12px;
+  left: -1px;
+  background-color: #fbb62b;
+  border-radius: 50%;
+}
+
+.spark4 {
+  width: 7px;
+  height: 7px;
+  left: 27px;
+  top: -5px;
+  animation: fire2 0.24s ease-in-out infinite, color2 0.2s linear infinite;
+}
+.spark5 {
+  width: 7px;
+  height: 7px;
+  left: 29px;
+  top: -5px;
+  animation: fire3 0.45s ease-in-out infinite, color 0.2s linear infinite;
+}
+
+.spark6 {
+  width: 6px;
+  height: 6px;
+  left: 29px;
+  top: -5px;
+  animation: fire 0.35s ease-in-out infinite, color2 0.2s linear infinite;
+}
+
+@keyframes fire3 {
+  100% { transform:translateX(20px) translateY(-93px); 
+         opacity: 0.3; }
+}
+
+@keyframes fire2 {
+  100% { transform:translateX(-5px) translateY(-90px); 
+         opacity: 0.3; }
+}
+
+@keyframes fire {
+  100% { transform:translateX(-25px) translateY(-95px); 
+         opacity: 0.3; }
+}
+
+@keyframes color {
+  from {background-color: #d00000;}
+  to {background-color: #0081a7;}
+}
+
+@keyframes color2 {
+  from {background-color: #8cff00;}
+  to {background-color: #1d2d44;}
+}
+
+#click:checked ~ .sparkles {
+  display: block;
 }
