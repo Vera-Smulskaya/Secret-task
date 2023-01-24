@@ -11,42 +11,50 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  max-width: 1208px;
+  max-width: 1110px;
   width: 100%;
-  padding-left: 4px;
-  padding-right: 4px;
-  /* outline: tomato 1px solid; */
-}
+} 
 
 header {
-  margin-bottom: 0;
+  margin: 0px;
+  max-width: 1110px;
 }
 
 .header__img {
-  max-width: 1200px;
+  width: 100%;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 4% 1fr 144px;
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(rgba(140, 140, 231, 0.5), 
+                    rgba(234, 228, 228, 0.426),
+                    rgba(240, 232, 8, 0.377)), 
+                    url(./images/background.jpg);  
+  background-size: cover;
 }
 
 .controller {
-  height: 466px;
+  height: 540px;
+  width: 60px;
   margin-right: 0;
 }
 
 .sidebar__right {
   background-color: black;
-  padding: 24px 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
 }
 
 .display {
   height: 100%;
-  background-image: url(../images/background.jpg);  
-  background-size: cover;
-  position: relative;
+  width: 95%;
 }
 
 .display__btn {
@@ -59,7 +67,7 @@ main {
   color: #ffffff;
 
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -72,19 +80,17 @@ main {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 95%;
-  left: 95%;
+  top: 15%;
+  left: 30%;
   transform: translate(-95%, -95%);
 
   transition-property: opacity;
   transition-duration: 450ms;
   transition-timing-function: ease-in;
-
 }
 
 .party-started {
-  opacity: 0.5;
-  pointer-events: visible;
+  display: block;
 }
 
 .display__btn:active {
@@ -93,12 +99,24 @@ main {
 
 .avatar__img {
   margin: 0 auto;
+  width: 65px;
+  height: 65px;
 }
 
 .avatar__name {
   color: #ffffff ;
-  font-size: 9px;
-  padding-left: 24px;
+  font-size: 6px;
   margin-top: 4px;
   margin-bottom: 8px;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  margin: 5px auto;
+}
+
+video {
+  margin-top: 1px;
+  display: none;
 }
