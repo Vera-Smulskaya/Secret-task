@@ -14,7 +14,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  /* max-width: 1110px; */
   width: 100%;
   height: 100%;
 }
@@ -41,12 +40,6 @@ main {
   background-size: cover;
 }
 
-/* .controller {
-  height: 100%;
-  width: 60px;
-  margin-right: 0;
-} */
-
 .sidebar__left {
   margin-top: -2px;
 }
@@ -66,7 +59,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  height: 100vh;  
+  cursor: crosshair;
 }
 
 .display__btn {
@@ -129,15 +124,10 @@ main {
   margin: 5px auto;
 }
 
-video {
-  margin: auto;
-  margin-top: 1px;
-  display: none;
-}
-
 .birthday-gift {
   position: relative;
 }
+
 .birthday-gift:before {
   content: "";
   position: absolute;
@@ -215,8 +205,8 @@ input#click {
   color: #333;
   font-size: 37px;
   text-align: center;
-  z-index: -1;
   left: 5px;
+  z-index: -1;
 }
 
 #click:checked + .click {
@@ -224,13 +214,13 @@ input#click {
 }
 #click:checked ~ .wishes {
   transform: translateY(-100px);
+  z-index: 0;
 }
 
 .sparkles {
   position: absolute;
   display: none;
   top: -15px;
-  z-index: -2;
   left: 40px;
 }
 
@@ -244,7 +234,6 @@ input#click {
   background-color: #fbb62b;
   border-radius: 50%;
   top: -9px;
-  z-index: -1;
 }
 
 .spark1 {
@@ -353,4 +342,22 @@ input#click {
 
 #click:checked ~ .sparkles {
   display: block;
+}
+
+canvas{
+  display: block;
+}
+
+.best__wish {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: #fff;
+  font-family: "Source Sans Pro";
+  font-size: 24px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  user-select: none;
+  display: none;
 }
