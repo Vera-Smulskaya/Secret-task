@@ -1,15 +1,11 @@
 function main() {
   refs = {
-    // song: document.querySelector(".song"),
     gift_box: document.querySelector(".birthday-gift"),
     container: document.querySelector(".container"),
     wish: document.querySelector(".best__wish"),
   };
 
   const goGoGoParty = () => {
-    console.log("click");
-    // refs.song.play();
-    // refs.song.classList.add("party-started");
     refs.gift_box.style.display = "none";
     refs.container.style.display = "none";
     refs.wish.style.display = "inline";
